@@ -903,6 +903,53 @@ Why not sooner?
  - Clients on different (ancient versions)
 - slow to developers
     - best option
+- Cloud products
+ - Subset of add-ons / extensions 
+    - can't be all things to all people
+---
+layout: false
+.left-column[
+##Talking Points:
+###Atlassian Suite
+###SAI Subset </br> (what we use) </br>
+##Successes and Challenges
+##:Atlassian Suite: ]
+
+.right-column[
+<img src="./images/93up.png"  style=" width: 400px;"/>
+<img src="./images/9306up.png"  style=" width: 400px;"/>
+<img src="./images/Uptimeerror.png"  style=" width: 400px;"/>
+]
+
+.footnote[<img src="./images/source-allies-logo-final.png"  style="    left: -10px;
+    position: absolute; width: 200px;"/>]
+
+
+???
+section 4-2 overview
+Cons:
+- Inability to be authenticated against local LDAP server
+    - Longstanding ticket for hosted product authenticated against hosted LDAP
+    - "Most requested ... Odd that its not being worked on" - Atlassian Rep
+- Cloud products
+ - Subset of add-ons / extensions 
+    - can't be all things to all people
+
+Atlassian Public image 
+ - doesnt make sense for long standing tickets
+
+
+- Ultimately results in requesting consultants to have multiple signs 
+ - note: welcomed trade off compared to maintenance of locally hosted
+- Cloud products
+ - Subset of add-ons / extensions 
+- Moving to the cloud ( Importing) 
+    - Multiple week ordeal
+    - Support was great
+    - Sales was a letdown
+        - licensing 
+    - Pricing was very low
+        - Give and take for sales feedback
 ---
 layout: false
 .left-column[
@@ -930,6 +977,22 @@ layout: false
 - Not a lot to say about trac other than
 - Jira was a welcomed change
 - (2 -3 years)
+
+- Storyboards for clients
+- Client visibility of agile boards 
+- Product Owners
+    - adjust priority
+Cons:
+- Setting up client permissions
+    - Option log in / view as this user ( security perspective )
+        - admin tool / preview option
+- Allows Clients to have greater visibility and the ability to act as scrum master / PM / Project Owner
+
+competition:
+    - rally
+        - no one likes rally :)
+
+    > "Supports scrum and agile at clients well"
 ---
 
 layout: false
@@ -1019,6 +1082,17 @@ Pros:
     - https://www.atlassian.com/software/confluence-questions
         - Tribal Knowledge
         - Josh Likes confluence
+
+- One area to improve
+    - Suggestions on Organize information
+        - Every year we get someone who wants to restructure hierarchy
+            - Tagging?
+                - Don't need to restructure
+            - Confluence Questions
+                - Simplified interface
+                - Extra $ for licensing
+        - Challenge: Internal best practices
+            - Add, review, remove
 
 ---
 
@@ -1148,6 +1222,30 @@ layout: false
 
 ???
 section 4-6 overview
+
+
+Bamboo - build system
+Cons:
+- Appears to not be a big focus for Atlassian
+- Documentation only supports cookie cutter approach
+- Would like to see more architects involved in this project
+- Do not allow bamboo to trigger agents on hosted software
+    - windows server 2012
+- Would be nice to point to local hosted machines
+    - windows server 2012
+- Alternative
+    - Jenkins
+        - Cost and Maintaince
+    - Local Bamboo
+    - Local Machines vs Amazon AMI
+
+
+Bamboo - build system
+Ideas / Wishful Thinking
+- Option
+    - Open Source 
+        - Add community support for beta test features 
+
 ---
 
 
@@ -1184,6 +1282,95 @@ layout: false
 section 4-6-2 overview
 # Bamboo is married to AWS ...
 
+Bamboo - build system
+- Amazon Web services
+    - Predefined Amazon Machine Image (AMI)
+- Adding a disk to AMI
+    - Atlassian docs: 
+        "Horrible, wrong, deceiving, damaging"
+    - Windows AMI
+        - Update AMI
+            - "Substantial amount of work"
+    - Linux AMI
+        - Amazon Linux (RHEL)
+            - Disk Volume
+                - Scripts / Directories
+                - Init Script for Dependencies
+                    - Custom Build (lock files)
+                        - Don't waste time downloading / installing already installed packages
+- Multiple Instances
+    - AMI instances can only mount one drive at a time.
+        - Solution is to convert volume to a snapshot
+    - Updating the EBS Volume and Snapshot:
+        https://allies.atlassian.net/wiki/display/infraoffice/Updating+the+EBS+Volume+and+Snapshot
+    - Multiple instances of Windows
+        - 2012 Server AMI
+        - Install everything
+        - Test
+        - Snapshot
+        - Sysprep
+        - AMI
+        - BambooTest
+            - 20 min Startup
+                - Upgrade to Amazon SSD storage
+                    -
+
+---
+layout: false
+.left-column[
+##Talking Points:
+###Atlassian Suite
+###SAI Subset </br> (what we use) </br>
+##Successes and Challenges
+##: BAMBOO :
+]
+
+
+.right-column[
+.center[
+</br>
+</br>
+</br>
+<img src="./images/logoBambooPNG.png"  style=" width: 300px;"/>
+</br>
+<img src="./images/blue-plus-hi.png"  style=" width: 100px;"/>
+</br>
+<img src="./images/aws-1.png"  style=" width: 300px;"/>
+]
+]
+
+
+
+.footnote[<img src="./images/source-allies-logo-final.png"  style="    left: -10px;
+    position: absolute; width: 200px;"/>]
+
+
+???
+section 4-6-2 overview
+# Bamboo is married to AWS ...
+- Multiple Instances
+    - AMI instances can only mount one drive at a time.
+        - Solution is to convert volume to a snapshot
+    - Updating the EBS Volume and Snapshot:
+        https://allies.atlassian.net/wiki/display/infraoffice/Updating+the+EBS+Volume+and+Snapshot
+    - Multiple instances of Windows
+        - 2012 Server AMI
+        - Install everything
+        - Test
+        - Snapshot
+        - Sysprep
+        - AMI
+        - BambooTest
+            - 20 min Startup
+                - Upgrade to Amazon SSD storage
+                    -
+
+Bamboo - Builds with AWS
+- time / Band with => $$$
+- Install Shield
+    - Dynamic vs Static
+        - Server requires logged in user for dlls
+            - Not an option with Amazon AMIs
 ---
 
 layout: false
@@ -1244,6 +1431,20 @@ layout: false
 ???
 section 4-8 overview
 
+Crowd:
+Pros:
+    - Single Sign On
+Cons:
+    - 
+
+
+SAI (not pointing to single source):
+    - Atlassian Cloud
+    - Zimbra
+        - Crowd
+    - Windows
+        - AD
+    - Linux Workstations
 # NEXT SECTION STARTS SUCCESSES AND CHALLENGES!
 ---
 
