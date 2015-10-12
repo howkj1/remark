@@ -730,7 +730,7 @@ JIRA -
 --- 
 ##Confluence
 
- Confluence - One are to improve
+ Confluence - One area to improve
                 - Suggestions on Organize information
                     - Every year we get someone who wants to restructure hierarchy
                         - Tagging?
